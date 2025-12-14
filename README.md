@@ -72,7 +72,7 @@ POST /parse-exam
 ## Project Structure
 
 ```
-ExamGenerator-api/
+Exam-Parser/
 ├── FileLoader.py       # Functions to read PDF and Word files
 ├── TextCleaner.py      # Functions to clean extracted text
 ├── ExamParser.py       # Core parsing logic to generate structured JSON
