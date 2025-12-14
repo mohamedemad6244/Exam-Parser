@@ -2,7 +2,7 @@ import os
 import json
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
-from flask_cors import CORS
+# from flask_cors import CORS
 
 from FileLoader import read_pdf_file, read_word_file
 from TextCleaner import clean_text
@@ -20,7 +20,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
-CORS(app)
+# CORS(app)
 
 # ========================
 # Utility Functions
@@ -122,6 +122,7 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=int(os.environ.get("PORT", 5000))
     )
+
 
 
 
