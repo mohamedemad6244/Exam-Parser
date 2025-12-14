@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+import json
 
 load_dotenv()
 
@@ -50,4 +51,56 @@ def parse_exam(text: str, model_id: str = "gemini-2.5-flash") -> str:
     )
 
     return response.text
+
+def parse_exam_test(text: str = "Test exam content") -> str:
+    """
+    Simulate parse_exam without calling Gemini API.
+    Returns a dummy JSON string matching the real output format.
+    """
+    dummy_response = {
+        "subject": "Dummy Subject",
+        "instructor": "Dummy Instructor",
+        "models": {
+            "A": [{"question_number": 1, "type": "MCQ", "question": "Sample question?", "options": ["A","B","C"], "answer": "A"}],
+            "B": [{"question_number": 1, "type": "MCQ", "question": "Sample question?", "options": ["A","B","C"], "answer": "A"}],
+            "C": [{"question_number": 1, "type": "MCQ", "question": "Sample question?", "options": ["A","B","C"], "answer": "A"}],
+            "D": [{"question_number": 1, "type": "MCQ", "question": "Sample question?", "options": ["A","B","C"], "answer": "A"}]
+        }
+    }
+    return json.dumps(dummy_response)
+
+def check_gemini_api(model_id: str = "gemini-2.5-flash") -> dict:
+    """
+    Test if Gemini API client is working by sending a minimal prompt.
+    Returns status dict: {success: bool, message: str}
+    """
+    try:
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            return {"success": False, "message": "GEMINI_API_KEY not found in .env"}
+
+        client = genai.Client(api_key=api_key)
+
+        # Minimal test content
+        test_content = "Hello, please respond with a short test message."
+
+        config = types.GenerateContentConfig(
+            system_instruction="You are a test assistant.",
+            temperature=0.0,
+            max_output_tokens=32
+        )
+
+        response = client.models.generate_content(
+            model=model_id,
+            contents=test_content,
+            config=config
+        )
+
+        if response.text.strip():
+            return {"success": True, "message": "Gemini API client works!"}
+        else:
+            return {"success": False, "message": "Gemini responded empty text"}
+
+    except Exception as e:
+        return {"success": False, "message": str(e)}
 
