@@ -2,11 +2,12 @@ import os
 import json
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
+from flask_cors import CORS   
 
 from FileLoader import read_pdf_file, read_word_file
 from TextCleaner import clean_text
 from ExamParser import parse_exam
-from JSONBulider import clean_and_validate_exam  # <-- Import the JSON cleaner
+from JSONBulider import clean_and_validate_exam
 
 # ========================
 # Configuration
@@ -18,6 +19,8 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+
+CORS(app)   # <-- ADD THIS (enables Access-Control-Allow-Origin: *)
 
 # ========================
 # Utility Functions
@@ -31,9 +34,6 @@ def allowed_file(filename: str) -> bool:
 
 @app.route("/", methods=["GET"])
 def health_check():
-    """
-    Health check endpoint
-    """
     return jsonify({
         "status": "success",
         "message": "Exam Parsing API is running successfully"
@@ -42,13 +42,6 @@ def health_check():
 
 @app.route("/parse-exam", methods=["POST"])
 def parse_exam_api():
-    """
-    POST /parse-exam
-    Form-data:
-      file: <PDF or DOCX file>
-    Returns:
-      JSON with keys: subject, instructor, models {A-D}
-    """
     if "file" not in request.files:
         return jsonify({"error": "No file provided"}), 400
 
@@ -65,7 +58,6 @@ def parse_exam_api():
     file.save(filepath)
 
     try:
-        # Read file
         if filename.lower().endswith(".pdf"):
             raw_text = read_pdf_file(filepath)
         else:
@@ -75,20 +67,15 @@ def parse_exam_api():
             return jsonify({"error": "File contains too little readable text"}), 400
 
         cleaned_text = clean_text(raw_text)
-
-        # LLM Processing
         exam_json_text = parse_exam(cleaned_text)
 
         if not exam_json_text or not exam_json_text.strip():
             return jsonify({"error": "LLM returned empty response"}), 500
 
-        # Clean and validate JSON to match {subject, instructor, models {A-D}}
         exam_data = clean_and_validate_exam(exam_json_text)
-
         return jsonify(exam_data), 200
 
     finally:
-        # Optional: remove uploaded file after processing
         if os.path.exists(filepath):
             os.remove(filepath)
 
