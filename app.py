@@ -43,13 +43,6 @@ def health_check():
 
 @app.route("/parse-exam", methods=["POST"])
 def parse_exam_api():
-    """
-    POST /parse-exam
-    Form-data:
-      file: <PDF or DOCX file>
-    Returns:
-      JSON with keys: subject, instructor, models {A-D}
-    """
     if "file" not in request.files:
         return jsonify({"error": "No file provided"}), 400
 
@@ -77,16 +70,17 @@ def parse_exam_api():
 
         cleaned_text = clean_text(raw_text)
 
-        # LLM Processing
         exam_json_text = parse_exam(cleaned_text)
 
         if not exam_json_text or not exam_json_text.strip():
             return jsonify({"error": "LLM returned empty response"}), 500
 
-        # Clean and validate JSON to match {subject, instructor, models {A-D}}
         exam_data = clean_and_validate_exam(exam_json_text)
-
         return jsonify(exam_data), 200
+
+    finally:
+        if os.path.exists(filepath):
+            os.remove(filepath)
 
 # ========================
 # App Entry Point
