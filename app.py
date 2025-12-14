@@ -41,7 +41,7 @@ def health_check():
 
 
 
-@app.route("/parse-exam", methods=["POST"])
+@app.route("/parse-exam", methods=["POST","OPTIONS"])
 def parse_exam_api():
     if "file" not in request.files:
         return jsonify({"error": "No file provided"}), 400
@@ -90,6 +90,7 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=int(os.environ.get("PORT", 5000))
     )
+
 
 
 
