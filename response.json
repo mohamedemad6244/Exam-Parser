@@ -1,0 +1,346 @@
+{
+  "instructor": "Unknown",
+  "models": {
+    "A": [
+      {
+        "answer": null,
+        "options": [
+          "Application : perform computing tasks",
+          "Database management : organize and store data",
+          "Host or Computer : runs applications and databases",
+          "Network : enable device communication",
+          "Storage : keep data for future use"
+        ],
+        "question": "What are the core components of a data center?",
+        "question_number": 1,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What are the key characteristics of a data center?",
+        "question_number": 2,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Explain the difference between NAS and SAN in terms of architecture and use cases.",
+        "question_number": 3,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Explain RAID implementation techniques and levels in detail.",
+        "question_number": 4,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is the main difference between single-mode fiber (SMF) and multimode fiber (MMF)?",
+        "question_number": 5,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Why do formatted disks have less capacity than unformatted disks?",
+        "question_number": 6,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is SAN zoning and what are the different types of zoning?",
+        "question_number": 7,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Differentiate between Software and Hardware RAID.",
+        "question_number": 8,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is the stripe size of a five disk RAID 5 set with a strip size of 32KB? Compare it with the stripe of a five disk RAID 0 array with the same strip size?",
+        "question_number": 9,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "How does data tiering optimize storage performance and cost in enterprise environments? Provide an example.",
+        "question_number": 10,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What are the benefits of using a virtualized data center compared to a traditional one?",
+        "question_number": 11,
+        "type": "Essay"
+      }
+    ],
+    "B": [
+      {
+        "answer": null,
+        "options": null,
+        "question": "What are the benefits of using a virtualized data center compared to a traditional one?",
+        "question_number": 11,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "How does data tiering optimize storage performance and cost in enterprise environments? Provide an example.",
+        "question_number": 10,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is the stripe size of a five disk RAID 5 set with a strip size of 32KB? Compare it with the stripe of a five disk RAID 0 array with the same strip size?",
+        "question_number": 9,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Differentiate between Software and Hardware RAID.",
+        "question_number": 8,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is SAN zoning and what are the different types of zoning?",
+        "question_number": 7,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Why do formatted disks have less capacity than unformatted disks?",
+        "question_number": 6,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is the main difference between single-mode fiber (SMF) and multimode fiber (MMF)?",
+        "question_number": 5,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Explain RAID implementation techniques and levels in detail.",
+        "question_number": 4,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Explain the difference between NAS and SAN in terms of architecture and use cases.",
+        "question_number": 3,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What are the key characteristics of a data center?",
+        "question_number": 2,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": [
+          "Application : perform computing tasks",
+          "Database management : organize and store data",
+          "Host or Computer : runs applications and databases",
+          "Network : enable device communication",
+          "Storage : keep data for future use"
+        ],
+        "question": "What are the core components of a data center?",
+        "question_number": 1,
+        "type": "Essay"
+      }
+    ],
+    "C": [
+      {
+        "answer": null,
+        "options": [
+          "Application : perform computing tasks",
+          "Database management : organize and store data",
+          "Host or Computer : runs applications and databases",
+          "Network : enable device communication",
+          "Storage : keep data for future use"
+        ],
+        "question": "What are the core components of a data center?",
+        "question_number": 1,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Explain the difference between NAS and SAN in terms of architecture and use cases.",
+        "question_number": 3,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is the main difference between single-mode fiber (SMF) and multimode fiber (MMF)?",
+        "question_number": 5,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is SAN zoning and what are the different types of zoning?",
+        "question_number": 7,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is the stripe size of a five disk RAID 5 set with a strip size of 32KB? Compare it with the stripe of a five disk RAID 0 array with the same strip size?",
+        "question_number": 9,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What are the benefits of using a virtualized data center compared to a traditional one?",
+        "question_number": 11,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What are the key characteristics of a data center?",
+        "question_number": 2,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Explain RAID implementation techniques and levels in detail.",
+        "question_number": 4,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Why do formatted disks have less capacity than unformatted disks?",
+        "question_number": 6,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Differentiate between Software and Hardware RAID.",
+        "question_number": 8,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "How does data tiering optimize storage performance and cost in enterprise environments? Provide an example.",
+        "question_number": 10,
+        "type": "Essay"
+      }
+    ],
+    "D": [
+      {
+        "answer": null,
+        "options": null,
+        "question": "What are the key characteristics of a data center?",
+        "question_number": 2,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Explain RAID implementation techniques and levels in detail.",
+        "question_number": 4,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Why do formatted disks have less capacity than unformatted disks?",
+        "question_number": 6,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Differentiate between Software and Hardware RAID.",
+        "question_number": 8,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "How does data tiering optimize storage performance and cost in enterprise environments? Provide an example.",
+        "question_number": 10,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": [
+          "Application : perform computing tasks",
+          "Database management : organize and store data",
+          "Host or Computer : runs applications and databases",
+          "Network : enable device communication",
+          "Storage : keep data for future use"
+        ],
+        "question": "What are the core components of a data center?",
+        "question_number": 1,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "Explain the difference between NAS and SAN in terms of architecture and use cases.",
+        "question_number": 3,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is the main difference between single-mode fiber (SMF) and multimode fiber (MMF)?",
+        "question_number": 5,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is SAN zoning and what are the different types of zoning?",
+        "question_number": 7,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What is the stripe size of a five disk RAID 5 set with a strip size of 32KB? Compare it with the stripe of a five disk RAID 0 array with the same strip size?",
+        "question_number": 9,
+        "type": "Essay"
+      },
+      {
+        "answer": null,
+        "options": null,
+        "question": "What are the benefits of using a virtualized data center compared to a traditional one?",
+        "question_number": 11,
+        "type": "Essay"
+      }
+    ]
+  },
+  "subject": "Data Center Technologies"
+}
